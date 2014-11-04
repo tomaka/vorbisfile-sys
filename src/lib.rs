@@ -6,11 +6,11 @@ extern crate "vorbis-sys" as vorbis_sys;
 
 #[repr(C)]
 pub struct ov_callbacks {
-    pub read_func: fn(*mut libc::c_void, libc::size_t, libc::size_t, *mut libc::c_void)
+    pub read_func: extern fn(*mut libc::c_void, libc::size_t, libc::size_t, *mut libc::c_void)
         -> libc::size_t,
-    pub seek_func: fn(*mut libc::c_void, ogg::ogg_int64_t, libc::c_int) -> libc::c_int,
-    pub close_func: fn(*mut libc::c_void) -> libc::c_int,
-    pub tell_func: fn(*mut libc::c_void) -> libc::c_long,
+    pub seek_func: extern fn(*mut libc::c_void, ogg::ogg_int64_t, libc::c_int) -> libc::c_int,
+    pub close_func: extern fn(*mut libc::c_void) -> libc::c_int,
+    pub tell_func: extern fn(*mut libc::c_void) -> libc::c_long,
 }
 
 // TODO: add static callbacks
