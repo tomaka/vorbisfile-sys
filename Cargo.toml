@@ -9,6 +9,9 @@ build = "libvorbisfile/build.rs"
 [build-dependencies.gcc]
 git = "https://github.com/alexcrichton/gcc-rs"
 
+[build-dependencies.pkg-config]
+git = "https://github.com/alexcrichton/pkg-config-rs"
+
 [dependencies.ogg-sys]
 git = "https://github.com/tomaka/ogg-sys"
 

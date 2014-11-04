@@ -1,6 +1,13 @@
+extern crate "pkg-config" as pkg_config;
 extern crate gcc;
 
 fn main() {
+    let opts = pkg_config::default_options("vorbisfile");
+    match pkg_config::find_library_opts("vorbisfile", &opts) {
+        Ok(()) => return,
+        Err(..) => {}
+    };
+
     let config = gcc::Config {
         include_directories: vec![
             Path::new(std::os::getenv("DEP_VORBIS_INCLUDE").unwrap()),
