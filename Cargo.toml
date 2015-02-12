@@ -1,6 +1,6 @@
 [package]
 name = "vorbisfile-sys"
-version = "0.0.2"
+version = "0.0.3"
 description = "FFI for the vorbisfile library"
 license = "MIT"
 authors = ["Pierre Krieger <pierre.krieger1708@gmail.com>"]
@@ -12,5 +12,6 @@ gcc = "*"
 pkg-config = "*"
 
 [dependencies]
+libc = "*"
 ogg-sys = "*"
 vorbis-sys = "*"
