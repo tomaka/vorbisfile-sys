@@ -1,6 +1,6 @@
 [package]
 name = "vorbisfile-sys"
-version = "0.0.5"
+version = "0.0.6"
 description = "FFI for the vorbisfile library"
 license = "MIT"
 authors = ["Pierre Krieger <pierre.krieger1708@gmail.com>"]
