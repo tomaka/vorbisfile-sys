@@ -8,8 +8,8 @@ links = "vorbisfile"
 build = "libvorbisfile/build.rs"
 
 [build-dependencies]
-gcc = "*"
-pkg-config = "*"
+gcc = "0.2"
+pkg-config = "0.2"
 
 [dependencies]
 libc = "*"
