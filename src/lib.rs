@@ -1,8 +1,8 @@
 #![allow(non_snake_case)]
 
 extern crate libc;
-extern crate "ogg-sys" as ogg;
-extern crate "vorbis-sys" as vorbis_sys;
+extern crate ogg_sys as ogg;
+extern crate vorbis_sys;
 
 #[repr(C)]
 pub struct ov_callbacks {
